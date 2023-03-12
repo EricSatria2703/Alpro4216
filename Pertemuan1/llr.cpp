@@ -38,7 +38,7 @@ int main ()
                     masuk = true;
                     tempname=uname[i];
                     break;
-                }
+                }   
                 else {
                     gagal = true;
                 }

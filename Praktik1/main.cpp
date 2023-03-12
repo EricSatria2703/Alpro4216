@@ -11,13 +11,13 @@ void biodata(){
     cout << "NIM saya A11.2022.14601" << endl;
 }
 
-string oddeven(int j) {
-    int k = j%2;
-    if (k!=0) {
-        return "ganjil";
+string gg(int l) {
+    int o = l%2;
+    if (o=0) {
+        return "genap";
     }
     else {
-        return "genap";
+        return "ganjil";
     }
 
 }
@@ -25,7 +25,7 @@ string oddeven(int j) {
 int main()
 {
 
-    cout << oddeven(6);
+    cout << gg(6);
 
     /*
     string nama;
