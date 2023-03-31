@@ -35,10 +35,23 @@ void printArray(int array[], int size) {
     }
 }
 
+void insertArray(int array[], int size){
+    for(int i=0;i<size;i++){
+        cout << i+1 <<". Inputkan nilai: ";
+        cin >> array[i];
+    }
+}
+
 int main()
 {
-    int arr[] = {6,4,3};
-    int size = sizeof(arr)/sizeof(int);
+    int size;
+    cout << "Inputkan ukuran array: ";
+    cin >> size;
+    int arr[size];
+    insertArray(arr,size);
+    cout << "Unsorted: ";
+    printArray(arr,size);
     bubblesort(arr,size);
+    cout << "\nSorted: ";
     printArray(arr,size);
 }
