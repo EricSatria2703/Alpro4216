@@ -123,6 +123,7 @@ int binarySearch (int arr[][2], int size, int searchKey) {
         middle = (left+right)/2;
         if (arr[middle][0] == searchKey) {
             found=middle;
+            return found;
         }
         else if (searchKey < arr[middle][0]) {
             right = middle-1;
@@ -131,6 +132,7 @@ int binarySearch (int arr[][2], int size, int searchKey) {
             left = middle+1;
         }
     }
+    selectionsortNilai(arr, size);
     left=0;
     right=size-1;
     middle=0;
