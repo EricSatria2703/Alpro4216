@@ -22,6 +22,21 @@ void printArray(int array[], int size) {
     }
 }
 
+void linearSearch(int arr[], int size, int key) {
+    bool found = false;
+    for(int i=0;i<size;i++) {
+        if (arr[i]==key) {
+        found = true;
+        }
+    }
+    if (found) {
+        cout << "Ditemukan!" << endl;
+    }
+    else {
+        cout << "Tidak ditemukan!" << endl;
+    } 
+}
+
 int binarySearch (int arr[], int size, int searchKey) {
     int left = 0;
     int right = size-1;
@@ -43,9 +58,19 @@ int binarySearch (int arr[], int size, int searchKey) {
 
 int main()
 {
+    int key;
     int list[6] = {13,14,2,8,25,6};
     selectionsort(list, 6);
     printArray(list, 6);
-    int hasil = binarySearch(list, 6, 6);
+    cout << "\nInputkan angka yang akan dicari: ";
+    cin >> key;
+
+    //SEQUENTIAL SEARCH
+    linearSearch(list, 6, key);
+
+    //BINARY SEARCH
+    /*
+    int hasil = binarySearch(list, 6, key);
     cout << "\nDitemukan pada indeks ke " << hasil << "\n";
+    */
 }
