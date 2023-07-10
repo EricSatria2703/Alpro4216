@@ -103,6 +103,5 @@ int main()
             cout << "Input tidak valid!" << endl;
         } 
     }
-
     return 0;
 }

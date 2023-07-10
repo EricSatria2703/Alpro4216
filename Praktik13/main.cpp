@@ -1,30 +1,9 @@
 #include <iostream>
 using namespace std;
 
-// struct node {
-//     int data;
-//     struct node* next;
-// };
-
-// struct node* head = NULL;
-// void insert(int new_data){
-//     struct node* new_node = (struct node*) malloc(sizeof(struct node));
-//     new_node->data = new_data;
-//     new_node->next = head;
-//     head = new_node;
-// }
-
-// void display(){
-//     struct node* ptr;
-//     ptr = head;
-//     while (ptr != 0){
-//         cout << ptr->data <<" ";
-//         ptr = ptr->next;
-//     }
-// }
-
 struct node {
     int data;
+    string nama;
     node *next;
 };
 
@@ -43,9 +22,10 @@ int isKosong() {
     }
 }
 
-void tmbh_dpn(int dataBaru) {
+void tmbh_dpn(int dataBaru, string namaBaru) {
     node *nodeBaru =  new node;
     nodeBaru->data = dataBaru;
+    nodeBaru->nama = namaBaru;
     nodeBaru->next = NULL;
     if(isKosong()==1) {
         head=nodeBaru;
@@ -64,7 +44,8 @@ void tampil() {
 
     if(isKosong()!=1) {
         while(nodeBantu != NULL) {
-            cout << nodeBantu->data << " ";
+            cout << "NIM: " << nodeBantu->data << endl;
+            cout << "Nama: " << nodeBantu->nama << endl;
             nodeBantu = nodeBantu->next;
         }
     }
@@ -76,11 +57,13 @@ void tampil() {
 int main()
 {
     init();
-    tmbh_dpn(4);
-    tmbh_dpn(10);
-    tmbh_dpn(22);
-    tmbh_dpn(3);
-    tmbh_dpn(15);
+    tmbh_dpn(0001, "Adhi");
+    tmbh_dpn(0002, "Budi");
+    tmbh_dpn(0003, "Cella");
+    tmbh_dpn(0004, "Doni");
+    tmbh_dpn(0005, "Eric");
+    tmbh_dpn(0006, "Fitri");
+    tmbh_dpn(0007, "Guntur");
     tampil();
     return 0;
 }
